@@ -1,0 +1,37 @@
+ios deployment process:
+https://www.youtube.com/watch?v=LE4Mgkrf7Sk&t=681s
+
+isTestVersion less than the firebase
+
+change the app.json version,buildNumber file:
+buildNumber,
+version
+create file:
+npx eas build --platform ios
+
+choose: nahoum huri
+submit to test flight:
+npx eas submit -p ios --latest 
+
+**remove roll of deletion from firebase
+
+
+configuration for eas:
+npx expo eas login
+ npx eas build:configure
+
+
+*****android deployment process:****
+https://www.youtube.com/watch?v=oBWBDaqNuws
+
+isTestVersion less than the firebase
+
+change the app.json version,buildNumber file:
+version?
+npx eas build:configure
+create apk file:
+npx eas build -p android --profile preview
+npx -p android --profile preview
+crete abb file:
+submit to :
+npx eas build --platform android

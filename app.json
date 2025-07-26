@@ -1,0 +1,77 @@
+{
+  "expo": {
+    "name": "מחוננים הכנה לשלב א",
+    "slug": "mehunanim-a-arabic",
+    "description": "הילדים הגיעו לכיתה ב או ג'? מחוננים – מחונני העל (מקבוצת בית ספר לחיים) הינו הארגון המוביל בהכנה למיונים לתוכנית המחוננים ומספק את ההכנה המושלמת למבחן שלב א'! אנו מאמינים שלכל ילד וילדה במדינה מגיעה הזדמנות שווה להצליח ולהגשים את עצמם. אנו מאמינים כי ישנם ילדים ברחבי הארץ שיכולים להגיע להישגים מדהימים בחייהם אם רק יתקבלו למסלולים הנכונים ויגיעו למסגרות המתאימות. עד היום מאות אלפי תלמידים התכוננו דרכנו לקבלה למסלולים מגוונים וזאת על מנת לממש את הפוטנציאל שלהם ולהגיע להישגים משמעותיים בחייהם וזו היא מטרתנו! מחוננים – מחונני העל הינה פלטפורמה דיגיטאלית וידידותית שמטרתה - הכנת ילדים לקראת המיונים למבחן מחוננים, באופן יעיל ומקצועי. בפלטפורמה יש הכנה בחינם ואם תרצו להשקיע תוכלו גם לרכוש את מנוי פרימיום שמעניק גישה לכל התרגולים. מבחן המחוננים שלב א' הוא השלב הראשון במבחני המיון למחוננים וביחד עם שלב ב' שהינו שלב מיון נוסף לילדים שעברו את שלב מיון א', שני מיונים אלו מסננים, וקובעים איזה ילד או ילדה התקבלו לתוכנית המחוננים.  ההשקעה הנוספת לכל ילד מחונן עומדת על כ-40 אלף ₪ בשנה ובמשך השנים סכום זה מצטבר למאות אלפי ₪ בחינוך והעשרת ילדכם מלבד מסגרות החינוך הפורמליות. כך סביר שההשקעה בהכנה למיונים אלו יכולה להיות ההשקעה המשתלמת ביותר שתבצעו בחייכם.",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon/1024ios.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#e8ecf4"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mehunanim.mehunanima",
+      "buildNumber": "1"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon/1024.png",
+        "backgroundColor": "#e8ecf4"
+      },
+      "package": "com.mehunanim.mehunanima",
+      "googleServicesFile": "./google-services.json",
+      "versionCode": 1,
+      "minSdkVersion": 35
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-updates",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 35,
+            "targetSdkVersion": 35,
+            "buildToolsVersion": "35.0.0"
+          },
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ],
+      "expo-localization",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon/favicon.png",
+          "color": "#ffffff"
+        }
+      ],
+      "expo-router"
+    ],
+    "updates": {
+      "enabled": true,
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/3ac6fa1a-9f50-439f-913e-bbbef35a661b"
+    },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "0b4d3826-e90d-4bb7-8aab-aa143bed1f92"
+      }
+    }
+  }
+}

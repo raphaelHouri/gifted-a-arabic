@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "682236323041",
+    "project_id": "gifted-arabic",
+    "storage_bucket": "gifted-arabic.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:682236323041:android:347813004236db55ce03a0",
+        "android_client_info": {
+          "package_name": "com.mehunanim.mehunanimaarabic"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiGNqXywYuw2BjlBtAwDfRe6HHf_OskvY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
