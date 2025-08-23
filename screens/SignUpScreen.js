@@ -75,7 +75,7 @@ export default function SignInScreen() {
             alt="icon"
             resizeMode="contain"
             style={styles.headerImg}
-            source={require("./../assets/icon/512blue.png")}
+            source={require("./../assets/icon/512.png")}
           />
 
           <Text style={styles.title}>

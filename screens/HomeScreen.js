@@ -117,7 +117,7 @@ const HomeScreen = () => {
               >
                 <Icon name="printer" size={28} color="#000" />
                 <Text className="text-black text-lg font-semibold ml-3">
-                  להדפסת מבחנים
+                  موادّ للطباعة
                 </Text>
               </Animated.View>
             </TouchableOpacity>

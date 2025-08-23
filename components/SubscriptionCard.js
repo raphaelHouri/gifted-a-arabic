@@ -170,7 +170,7 @@ const SubscriptionCard = ({ route }) => {
         </View>
         {!!examDetails?.examDate ? (
           <Text className="m-2 text-left color-gray-700">
-            *הבחינה תתקיים בתאריך: {examDetails.examDate}
+            *سيُعقد الامتحان في تاريخ: {examDetails.examDate}
           </Text>
         ) : null}
       </View>

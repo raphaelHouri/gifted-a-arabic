@@ -21,26 +21,6 @@ import {
 import ModalBottom from "../modal/ModalBottom";
 import { useAuth } from "../useContext/AuthContext";
 
-const SECTIONS = [
-  {
-    header: languagePrintPaperDict["comprehension"],
-    items: [
-      {
-        icon: "download",
-        label: languagePrintPaperDict["article 1-20"],
-        filePath: "articles%2Farticle%201-20.pdf",
-        filename: `${languagePrintPaperDict["article 1-20"]}.pdf`,
-      },
-      {
-        icon: "download",
-        label: languagePrintPaperDict["article 21-40"],
-        filePath: "articles%2Farticle%2021-40.pdf",
-        filename: `${languagePrintPaperDict["article 21-40"]}.pdf`,
-      },
-    ],
-  },
-];
-
 const SECTIONS1 = [
   {
     header: languagePrintPaperDict["testsExample"],
@@ -48,39 +28,8 @@ const SECTIONS1 = [
       {
         icon: "download",
         label: languagePrintPaperDict["test1free"],
-        filePath: "exam%2Ftest1free.pdf",
-        filename: `מבחן1.pdf`,
-      },
-      {
-        icon: "download",
-        label: languagePrintPaperDict["test2free"],
-        filePath: "exam%2Ftest2free.pdf",
-        filename: `${languagePrintPaperDict["test2free"]}.pdf`,
-      },
-    ],
-  },
-];
-const SECTIONS2 = [
-  {
-    header: languagePrintPaperDict["tests"],
-    items: [
-      {
-        icon: "download",
-        label: languagePrintPaperDict["test1"],
-        filePath: "exam%2Ftest1.pdf",
-        filename: `${languagePrintPaperDict["test1"]}.pdf`,
-      },
-      {
-        icon: "download",
-        label: languagePrintPaperDict["test2"],
-        filePath: "exam%2Ftest2.pdf",
-        filename: `${languagePrintPaperDict["test2"]}.pdf`,
-      },
-      {
-        icon: "download",
-        label: languagePrintPaperDict["test3"],
-        filePath: "exam%2Ftest3.pdf",
-        filename: `${languagePrintPaperDict["test3"]}.pdf`,
+        filePath: "exam%2Ftest1freearabic.pdf",
+        filename: `امتحان.pdf`,
       },
     ],
   },
@@ -132,7 +81,8 @@ export const PrintPaperScreen = () => {
             }
           </Text>
         </View>
-        {/* {SECTIONS.map(({ header, items }) => (
+
+        {SECTIONS1.map(({ header, items }) => (
           <View style={styles.section} key={header}>
             <View
               style={styles.sectionHeader}
@@ -151,90 +101,7 @@ export const PrintPaperScreen = () => {
                     ]}
                   >
                     <TouchableOpacity
-                      onPress={() => downloadFile(filePath, filename)}
-                    >
-                      <View style={styles.row}>
-                        <FontAwesome5
-                          color="#616161"
-                          name={icon}
-                          style={styles.rowIcon}
-                          size={22}
-                        />
-                        <Text style={styles.rowLabel}>{label}</Text>
-
-                        <View style={styles.rowSpacer} />
-                        <AntDesign name="left" size={22} color="#00CCBB" />
-                      </View>
-                    </TouchableOpacity>
-                  </View>
-                );
-              })}
-            </View>
-          </View>
-        ))} */}
-
-        {currentUser?.isPremium
-          ? null
-          : SECTIONS1.map(({ header, items }) => (
-              <View style={styles.section} key={header}>
-                <View
-                  style={styles.sectionHeader}
-                  className="flex-row justify-start"
-                >
-                  <Text style={styles.sectionHeaderText}>{header}</Text>
-                </View>
-                <View style={styles.sectionBody}>
-                  {items.map(({ label, icon, filePath, filename }, index) => {
-                    return (
-                      <View
-                        key={label}
-                        style={[
-                          styles.rowWrapper,
-                          index === 0 && { borderTopWidth: 0 },
-                        ]}
-                      >
-                        <TouchableOpacity
-                          onPress={() => downloadFile(filePath, filename, true)}
-                        >
-                          <View style={styles.row}>
-                            <FontAwesome5
-                              color="#616161"
-                              name={icon}
-                              style={styles.rowIcon}
-                              size={22}
-                            />
-                            <Text style={styles.rowLabel}>{label}</Text>
-
-                            <View style={styles.rowSpacer} />
-                            <AntDesign name="left" size={22} color="#00CCBB" />
-                          </View>
-                        </TouchableOpacity>
-                      </View>
-                    );
-                  })}
-                </View>
-              </View>
-            ))}
-        {SECTIONS2.map(({ header, items }) => (
-          <View style={styles.section} key={header}>
-            <View
-              style={styles.sectionHeader}
-              className="flex-row justify-start"
-            >
-              <Text style={styles.sectionHeaderText}>{header}</Text>
-            </View>
-            <View style={styles.sectionBody}>
-              {items.map(({ label, icon, filePath, filename }, index) => {
-                return (
-                  <View
-                    key={label}
-                    style={[
-                      styles.rowWrapper,
-                      index === 0 && { borderTopWidth: 0 },
-                    ]}
-                  >
-                    <TouchableOpacity
-                      onPress={() => downloadFile(filePath, filename, false)}
+                      onPress={() => downloadFile(filePath, filename, true)}
                     >
                       <View style={styles.row}>
                         <FontAwesome5

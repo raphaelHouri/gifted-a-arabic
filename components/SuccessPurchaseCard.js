@@ -80,7 +80,7 @@ const SuccessPurchaseCard = () => {
             {languagePurchaseDict["Payment has been successfully completed"]}
           </Text>
           <Text className="text-xl mb-2">
-            מרגע זה הערכה המלאה פתוח ל{selected.days} ימים
+            من هذه اللحظة يكون الطقم الكامل مفتوحًا لمدّة {selected.days} أيام
           </Text>
         </View>
         <View

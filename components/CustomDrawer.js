@@ -354,7 +354,9 @@ const CustomDrawer = (props) => {
             </Text>
           </View>
         </ImageBackground>
-        <ScrollView style={{ flex: 1, backgroundColor: "#fff", paddingTop: 10 }}>
+        <ScrollView
+          style={{ flex: 1, backgroundColor: "#fff", paddingTop: 10 }}
+        >
           {/* <DrawerItemList {...props} /> BC the DrawerItemList does not support custom styles for IOS for the borderRadius , so we map through the routes and create DrawerItem components manually.  */}
           {props.state.routes.map((route, index) => {
             const isFocused = props.state.index === index;
@@ -477,7 +479,7 @@ const CustomDrawer = (props) => {
                     color: "red",
                   }}
                 >
-                  {"מחיקת משתמש"}
+                  {"حذف المستخدم"}
                 </Text>
               </View>
             </TouchableOpacity>

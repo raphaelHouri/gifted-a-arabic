@@ -22,7 +22,7 @@ export const languageSettingsDict = {
   "Modified successfully": "تمّ التحديث بالنجاح",
   "Modified failed": "فشل التحديث",
   premium: "تفاصيل الاشتراك",
-  status: "الحالة",
+  status: "نوع الاشتراك",
   "start time premium": "بداية الاشتراك",
   "end time premium": "نهاية الاشتراك",
 };

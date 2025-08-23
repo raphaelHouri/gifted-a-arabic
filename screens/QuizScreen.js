@@ -662,7 +662,7 @@ const Quiz = () => {
       >
         {/* Question Counter */}
         <View className="flex-row items-start" style={{ direction: "rtl" }}>
-          <Text className="text-black text-lg font-semibold mr-0.5">הסבר:</Text>
+          <Text className="text-black text-lg font-semibold mr-0.5">شرح:</Text>
         </View>
         {/* Question */}
         {currentQuestion?.explanationImage && (

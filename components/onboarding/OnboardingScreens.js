@@ -151,8 +151,8 @@ export default function OnboardingScreens() {
   return (
     <View style={styles.container}>
       <Onboarding
-        skipLabel="דלג"
-        nextLabel="הבא"
+        skipLabel="تخطّى"
+        nextLabel="التالي"
         onDone={handleDone}
         onSkip={handleDone}
         containerStyles={{ paddingHorizontal: 15 }}
@@ -160,7 +160,7 @@ export default function OnboardingScreens() {
           return {
             backgroundColor: page?.backgroundColor,
             image: (
-              <View className="flex-col align-middle justify-center items-center">
+              <View className="flex-col align-middle justify-center items-center   flex overflow-auto">
                 {page?.image ? renderImage(page.image) : null}
                 {page?.title ? (
                   <Text className="text-2xl color-gray-700 underline">

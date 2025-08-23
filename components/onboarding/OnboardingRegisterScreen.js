@@ -25,7 +25,7 @@ export const pages = [
     image: "successRegister",
     title: "تم التسجيل بالنجاح",
     listContent: [
-      "السلام عليكم أولياء الأمور الكرام",
+      "مرحبًا بكم أولاء الأمور الكرامكم أولياء الأمور الكرام",
       "يسرّنا مرافقتكم خلال عملية تحضير أطفالكم استعدادًا لامتحانات القبول لبرنامج الموهوبين (والمتفوقين) الخاص بوزارة التربية والتعليم.",
       "ننصح بقراءة صفحة التوجيهات والنصائح في القائمة قبل بدء التحضير لمساعدة طفلكم قدر الإمكان. لقد حاولنا تلخيص النصائح والتركيز على الجوهر، لكن إذا كنتم مهتمين بمزيد من التحديثات والنصائح والأخبار المتعلقة بامتحان الموهوبين والمتفوقين، فأنتم مدعوون للانضمام إلى مجموعتنا على واتساب:",
     ],
@@ -36,7 +36,7 @@ export const pages = [
     image: "parents",
     title: "إرشادات لتجربة تعليمية ممتعة وجيدة",
     listContent: [
-      "السلام عليكم أولياء الأمور الكرام",
+      "مرحبًا بكم أولاء الأمور الكرامكم أولياء الأمور الكرام",
       "يسرّنا مرافقتكم خلال عملية تحضير أطفالكم استعدادًا لامتحانات القبول لبرنامج الموهوبين (والمتفوقين) الخاص بوزارة التربية والتعليم.",
       "ننصح بقراءة صفحة التوجيهات والنصائح في القائمة قبل بدء التحضير لمساعدة طفلكم قدر الإمكان. لقد حاولنا تلخيص النصائح والتركيز على الجوهر، لكن إذا كنتم مهتمين بمزيد من التحديثات والنصائح والأخبار المتعلقة بامتحان الموهوبين والمتفوقين، فأنتم مدعوون للانضمام إلى مجموعتنا على واتساب:",
     ],
@@ -152,8 +152,8 @@ export default function OnboardingRegisterScreen() {
   return (
     <View style={styles.container}>
       <Onboarding
-        skipLabel="דלג"
-        nextLabel="הבא"
+        skipLabel="تخطّى"
+        nextLabel="التالي"
         onDone={handleDone}
         onSkip={handleDone}
         containerStyles={{ paddingHorizontal: 15 }}
@@ -161,7 +161,7 @@ export default function OnboardingRegisterScreen() {
           return {
             backgroundColor: page?.backgroundColor,
             image: (
-              <View className="flex-col align-middle justify-center items-center">
+              <View className="flex-col align-middle justify-center items-center    flex overflow-auto">
                 {page?.image ? renderImage(page.image) : null}
                 {page?.title ? (
                   <Text className="text-2xl color-gray-700 underline">

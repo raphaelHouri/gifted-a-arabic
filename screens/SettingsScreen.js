@@ -282,8 +282,8 @@ export default function SettingsScreen() {
                           {id === "status" && (
                             <Text>
                               {currentUser.isPremium
-                                ? "ערכה מלאה"
-                                : "ערכה חינמית"}
+                                ? "طقم كامل"
+                                : "طقم مجاني"}
                             </Text>
                           )}
                           {id === "startTime" && (

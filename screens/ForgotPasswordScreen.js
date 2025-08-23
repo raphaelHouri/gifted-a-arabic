@@ -58,11 +58,11 @@ export default function ForgotPasswordScreen() {
     >
       <View style={styles.container}>
         <View style={styles.header}>
-        <Image
+          <Image
             alt="icon"
             resizeMode="contain"
             style={styles.headerImg}
-            source={require("./../assets/icon/512blue.png")}
+            source={require("./../assets/icon/512.png")}
           />
 
           <Text style={styles.title}>

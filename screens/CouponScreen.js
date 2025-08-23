@@ -31,18 +31,18 @@ import { FontAwesome5 } from "@expo/vector-icons";
 
 const SECTIONS = [
   {
-    header: "פרטים על הקופון",
+    header: "تفاصيل القسيمة",
     items: [
       {
         id: "discount",
         icon: "percentage",
-        label: "אחוז הנחה",
+        label: "نسبة الخصم",
         type: "detail",
       },
       {
         id: "expired",
         icon: "clock",
-        label: "תאריך תפוגה של הקופון",
+        label: "تاريخ انتهاء صلاحية القسيمة",
         type: "detail",
       },
     ],
@@ -79,12 +79,12 @@ export default function CouponScreen() {
       ) {
         // check date and limit
         setCouponDetails({ ...data, couponId: coupon });
-        return { success: true, message: "הקופון פעיל לשימוש" };
+        return { success: true, message: "القسيمة فعّالة للاستخدام" };
       }
       setCouponDetails(null);
-      return { success: false, message: "הקופון פג תוקף" };
+      return { success: false, message: "القسيمة منتهية الصلاحية" };
     } catch (e) {
-      return { success: false, message: "הקופון פג תוקף" };
+      return { success: false, message: "القسيمة منتهية الصلاحية" };
     }
   };
   const onSubmit = async (data) => {
@@ -103,7 +103,7 @@ export default function CouponScreen() {
           refRBSheet: refRBSheet,
           title: languageSettingsDict["Modified successfully"],
           image: "check",
-          actionText: "לשימוש בקופון",
+          actionText: "וلاستخدام القسيمة",
           action: () => navigation.navigate("SubscriptionStack"),
           type: "success",
           short: 3000,
@@ -111,7 +111,7 @@ export default function CouponScreen() {
       } else {
         setModalCoupon({
           refRBSheet: refRBSheet,
-          title: "הקופון לא פעיל",
+          title: "القسيمة غير فعّالة",
           image: "error",
           type: "error",
           short: 3000,
@@ -229,14 +229,14 @@ export default function CouponScreen() {
           <CustomInput
             name="coupon"
             control={control}
-            placeholder={"הכנס קופון"}
-            rules={requireText("קופון", 4)}
-            subtitle={"קופון הנחה"}
+            placeholder={"أدخل القسيمة"}
+            rules={requireText("القسيمة", 4)}
+            subtitle={"قسيمة الخصم"}
           />
 
           <Text className="text-red-500">{errorMessage}</Text>
           <CustomButton
-            text={loading ? "טוענים קופון" : "לבדיקת הקופון"}
+            text={loading ? "جاري تحميل القسيمة" : "لفحص القسيمة"}
             onPress={handleSubmit(onSubmit)}
           />
         </View>
